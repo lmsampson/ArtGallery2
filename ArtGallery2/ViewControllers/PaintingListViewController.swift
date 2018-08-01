@@ -8,13 +8,18 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController, UITableViewDataSource, UITabBarDelegate, PaintingTableViewCellDelegate {
+class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         paintingTableView.dataSource = self
+        paintingTableView.delegate = self
     }
-
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
         guard let indexPath = paintingTableView.indexPath(for: cell) else { return }
         guard let painting = cell.painting else { return }
