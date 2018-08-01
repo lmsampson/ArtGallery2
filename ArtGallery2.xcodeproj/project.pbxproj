@@ -12,6 +12,10 @@
 		FFAA542521125F22001A6443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAA542321125F22001A6443 /* Main.storyboard */; };
 		FFAA542721125F23001A6443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAA542621125F23001A6443 /* Assets.xcassets */; };
 		FFAA542A21125F23001A6443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAA542821125F23001A6443 /* LaunchScreen.storyboard */; };
+		FFAA543221126028001A6443 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA543121126028001A6443 /* Painting.swift */; };
+		FFAA54342112603B001A6443 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA54332112603B001A6443 /* PaintingController.swift */; };
+		FFAA54362112608F001A6443 /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA54352112608F001A6443 /* PaintingListViewController.swift */; };
+		FFAA5438211260AA001A6443 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA5437211260AA001A6443 /* PaintingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		FFAA542621125F23001A6443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFAA542921125F23001A6443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFAA542B21125F23001A6443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFAA543121126028001A6443 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
+		FFAA54332112603B001A6443 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
+		FFAA54352112608F001A6443 /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
+		FFAA5437211260AA001A6443 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		FFAA541E21125F22001A6443 /* ArtGallery2 */ = {
 			isa = PBXGroup;
 			children = (
+				FFAA5439211260B1001A6443 /* Model */,
+				FFAA543A211260C0001A6443 /* Model Controller */,
+				FFAA543B211260CF001A6443 /* ViewControllers */,
+				FFAA543C211260E4001A6443 /* Cells */,
+				FFAA543D211260F4001A6443 /* Storyboards */,
 				FFAA541F21125F22001A6443 /* AppDelegate.swift */,
 				FFAA542121125F22001A6443 /* ViewController.swift */,
-				FFAA542321125F22001A6443 /* Main.storyboard */,
 				FFAA542621125F23001A6443 /* Assets.xcassets */,
 				FFAA542821125F23001A6443 /* LaunchScreen.storyboard */,
 				FFAA542B21125F23001A6443 /* Info.plist */,
 			);
 			path = ArtGallery2;
+			sourceTree = "<group>";
+		};
+		FFAA5439211260B1001A6443 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA543121126028001A6443 /* Painting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFAA543A211260C0001A6443 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA54332112603B001A6443 /* PaintingController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		FFAA543B211260CF001A6443 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA54352112608F001A6443 /* PaintingListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FFAA543C211260E4001A6443 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA5437211260AA001A6443 /* PaintingTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FFAA543D211260F4001A6443 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA542321125F22001A6443 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAA54362112608F001A6443 /* PaintingListViewController.swift in Sources */,
+				FFAA543221126028001A6443 /* Painting.swift in Sources */,
+				FFAA54342112603B001A6443 /* PaintingController.swift in Sources */,
 				FFAA542221125F22001A6443 /* ViewController.swift in Sources */,
 				FFAA542021125F22001A6443 /* AppDelegate.swift in Sources */,
+				FFAA5438211260AA001A6443 /* PaintingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

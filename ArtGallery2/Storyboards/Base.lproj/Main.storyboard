@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gAO-8w-lWf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Art Gallery-->
+        <scene sceneID="08g-wn-tKn">
+            <objects>
+                <viewController title="Art Gallery" id="N2H-DA-ukx" customClass="PaintingListViewController" customModule="ArtGallery2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vhr-fO-YT8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LR3-vU-yjm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtCell" rowHeight="200" id="fpG-GB-nyz" customClass="PaintingTableViewCell" customModule="ArtGallery2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fpG-GB-nyz" id="GnT-Fc-xty">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kmT-FP-dOo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EOW-Mx-QMQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNX-hv-iPg">
+                                                            <rect key="frame" x="0.0" y="140" width="375" height="85"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="likeButtonWasTapped:" destination="fpG-GB-nyz" eventType="touchUpInside" id="Hr7-mP-0yl"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="225" id="8c0-4S-xVP"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="kmT-FP-dOo" secondAttribute="trailing" id="8wp-Vl-cd2"/>
+                                                <constraint firstItem="kmT-FP-dOo" firstAttribute="top" secondItem="GnT-Fc-xty" secondAttribute="top" id="9Os-z4-Ppb"/>
+                                                <constraint firstItem="kmT-FP-dOo" firstAttribute="leading" secondItem="GnT-Fc-xty" secondAttribute="leading" id="Msh-ph-UTM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artImageView" destination="EOW-Mx-QMQ" id="sDM-6n-W7k"/>
+                                            <outlet property="likeButton" destination="HNX-hv-iPg" id="eLi-K2-6kg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LR3-vU-yjm" firstAttribute="top" secondItem="Vhr-fO-YT8" secondAttribute="topMargin" constant="-52" id="4b4-mv-X4V"/>
+                            <constraint firstItem="LR3-vU-yjm" firstAttribute="leading" secondItem="Vhr-fO-YT8" secondAttribute="leading" id="LNO-I3-N9e"/>
+                            <constraint firstAttribute="trailing" secondItem="LR3-vU-yjm" secondAttribute="trailing" id="cOr-36-eRK"/>
+                            <constraint firstItem="LR3-vU-yjm" firstAttribute="bottom" secondItem="rxY-wR-vlt" secondAttribute="bottom" id="v7E-mu-x8f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rxY-wR-vlt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Art Gallery" id="58b-uS-EjC"/>
+                    <connections>
+                        <outlet property="paintingTableView" destination="LR3-vU-yjm" id="GnQ-S1-M2h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RZb-oT-1xn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.80000000000001" y="-142.57871064467767"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XWd-Gb-7Y8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gAO-8w-lWf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Yyc-hI-DnR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N2H-DA-ukx" kind="relationship" relationship="rootViewController" id="NZu-9m-lWE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDf-Il-dxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474" y="-142"/>
+        </scene>
+    </scenes>
+</document>
